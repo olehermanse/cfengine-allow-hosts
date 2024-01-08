@@ -1,0 +1,1 @@
+# cfengine-allow-hosts
