@@ -1,10 +1,10 @@
 {
   "name": "allow-hosts",
-  "description": "Allows specific hosts / IP addresses to connect and fetch policy.",
+  "description": "Allows specific hosts (by IP / subnet) to connect and fetch policy.",
   "type": "module",
   "provides": {
     "allow-hosts": {
-      "description": "Allows specific hosts / IP addresses to connect and fetch policy.",
+      "description": "Allows specific hosts (by IP / subnet) to connect and fetch policy.",
       "steps": ["input ./input.json def.json"],
       "input": [
         {
@@ -12,13 +12,13 @@
           "namespace": "default",
           "bundle": "def",
           "variable": "acl",
-          "label": "Allowed hosts / IPs",
+          "label": "Allowed hosts",
           "subtype": {
             "type": "string",
-            "label": "Host/IP",
-            "question": "Host / IP to allow"
+            "label": "IP / subnet",
+            "question": "IP / subnet to allow"
           },
-          "while": "Do you want to specify more hosts?"
+          "while": "Do you want to specify more IPs / subnets?"
         }
       ]
     }
